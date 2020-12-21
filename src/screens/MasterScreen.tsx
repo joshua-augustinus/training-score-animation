@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
-import { Button, Text, TextInput, TouchableOpacity, View, BackHandler } from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { Button, Text, TextInput, TouchableOpacity, View, BackHandler, Animated } from 'react-native';
 import { SafeAreaView, StackActions } from 'react-navigation';
 import { DrawerActions, NavigationDrawerProp } from 'react-navigation-drawer';
-import { FeatureButton } from '@src/components/FeatureButton';
+import { Score } from '@src/components/Score';
+
+
 
 /**
  * https://reactnavigation.org/docs/4.x/typescript
@@ -12,27 +14,18 @@ type Props = {
 }
 
 const MasterScreen = (props: Props) => {
-
+    const score = useRef(0);
+    const [value, setValue] = useState("0.0");
     useEffect(() => {
 
     }, []);
 
     const onMenuPress = () => {
-        console.log(props.navigation.state);// { key: 'Home', routeName: 'Home' }
-        console.log("Menu pressed");
-        props.navigation.dispatch(DrawerActions.toggleDrawer());
+        score.current = score.current + 0.1;
+        setValue(score.current.toFixed(1));
     }
 
-    const onButtonPress = () => {
-        const pushAction = StackActions.push({
-            routeName: 'Stack1',
-            params: {
-                myUserId: 9,
-            },
-        });
 
-        props.navigation.dispatch(pushAction);
-    }
 
 
     return (
@@ -45,7 +38,7 @@ const MasterScreen = (props: Props) => {
                 </TouchableOpacity>
             </View>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <FeatureButton />
+                <Score value={value} />
             </View>
         </SafeAreaView>
 
