@@ -42,19 +42,26 @@ const Score = (props: Props) => {
             duration: 0
         })
 
-        const pulse = Animated.timing(pulseAnimationState, {
+        const pulse1 = Animated.timing(pulseAnimationState, {
             useNativeDriver: true,
-            toValue: 1,
+            toValue: 0.2,
             duration: 1000,
             easing: Easing.linear
         });
 
-        Animated.sequence([reset, pulse]).start(() => {
+        const pulse2 = Animated.timing(pulseAnimationState, {
+            useNativeDriver: true,
+            toValue: 1,
+            duration: 200,
+            easing: Easing.linear
+        });
+
+        Animated.sequence([reset, pulse1, pulse2]).start(() => {
             //on value changed
             Animated.timing(animationState, {
                 useNativeDriver: true,
                 toValue: 1,
-                duration: 500
+                duration: 500,
             }).start(() => {
                 //reset
                 Animated.timing(animationState, {
@@ -107,7 +114,7 @@ const Score = (props: Props) => {
     })
     const pulseTransform = [{ scaleX: scaleX }, { scaleY: scaleY }];
     const opacity = pulseAnimationState.interpolate({
-        inputRange: [0, 0.5, 1],
+        inputRange: [0, 0.2, 1],
         outputRange: [AttentionConstants.LOWER_OPACITTY, 1, 1]
     })
 
@@ -126,7 +133,7 @@ const Score = (props: Props) => {
      */
     const translateYIn = animationState.interpolate({
         inputRange: [0, 1],
-        outputRange: [SCORE_HEIGHT, 0]
+        outputRange: [-SCORE_HEIGHT, 0]
     })
     const transform2 = [{ translateY: translateYIn }]
 
@@ -135,7 +142,7 @@ const Score = (props: Props) => {
      */
     const translateYOut = animationState.interpolate({
         inputRange: [0, 1],
-        outputRange: [0, -SCORE_HEIGHT]
+        outputRange: [0, SCORE_HEIGHT]
     })
     const transform3 = [{ translateY: translateYOut }]
 
@@ -172,6 +179,7 @@ const styles = StyleSheet.create({
         width: SCORE_WIDTH,
         height: SCORE_HEIGHT,
         overflow: 'hidden',
+        padding: 5,
         ...StyleSheet.absoluteFillObject
     },
     pulse: {

@@ -37,10 +37,17 @@ const AttentionButton = (props: Props) => {
         if (props.state === 'focused') {
             Animated.timing(animationState, {
                 useNativeDriver: true,
-                duration: 1000,
-                toValue: 1
+                duration: 200,
+                toValue: 0.8
             }).start(() => {
-                props.onAnimationFinished();
+                Animated.timing(animationState, {
+                    useNativeDriver: true,
+                    duration: 1000,
+                    toValue: 1
+                }).start(() => {
+                    props.onAnimationFinished();
+
+                })
             });
 
         } else if (props.state === 'default') {
@@ -96,7 +103,7 @@ const AttentionButton = (props: Props) => {
     const transform = [{ scaleX: scaleX }, { scaleY: scaleY }]
 
     const opacity = animationState.interpolate({
-        inputRange: [0, 0.5, 1],
+        inputRange: [0, 0.8, 1],
         outputRange: [1, 1, AttentionConstants.LOWER_OPACITTY]
     });
 
