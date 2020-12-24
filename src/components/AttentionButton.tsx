@@ -127,7 +127,7 @@ const AttentionButton = (props: Props) => {
     })
 
     const textColor = colorState.interpolate({
-        inputRange: [0, 0.8, 0.81, 1],
+        inputRange: [0, 0.8, 0.9, 1],
         outputRange: ['black', 'black', 'white', 'white']
     })
 
