@@ -116,7 +116,7 @@ const AttentionButton = (props: Props) => {
 
     const opacity = animationState.interpolate({
         inputRange: [0, 0.8, 1],
-        outputRange: [1, 1, AttentionConstants.LOWER_OPACITTY]
+        outputRange: [1, AttentionConstants.MIDDLE_OPACITY, AttentionConstants.LOWER_OPACITTY]
     });
 
 
@@ -137,7 +137,7 @@ const AttentionButton = (props: Props) => {
     })
 
     return (
-        <View>
+        <View style={{ opacity: props.state === 'unfocused' ? 0 : 1 }}>
 
             <View style={StyleSheet.absoluteFill}>
                 <Animated.View style={[styles.container, styles.expandingView, { transform: transform, opacity: opacity }]} />
