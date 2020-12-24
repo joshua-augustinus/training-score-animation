@@ -152,17 +152,21 @@ const Score = (props: Props) => {
 
             </Animated.View>
             <View style={styles.container} >
-
                 <View style={StyleSheet.absoluteFill}>
                     <Animated.View style={{ ...styles.border, borderColor: borderColor }} />
                 </View>
+                <View style={styles.innerContainer}>
 
-                <View style={styles.textContainer}>
-                    <Animated.Text style={{ ...styles.text, transform: transform2 }}>{props.value}</Animated.Text>
+
+                    <View style={styles.textContainer}>
+                        <Animated.Text style={{ ...styles.text, transform: transform2 }}>{props.value}</Animated.Text>
+                    </View>
+                    <View style={styles.textContainer}>
+                        <Animated.Text style={{ ...styles.text, transform: transform3 }}>{oldValue}</Animated.Text>
+                    </View>
+
                 </View>
-                <View style={styles.textContainer}>
-                    <Animated.Text style={{ ...styles.text, transform: transform3 }}>{oldValue}</Animated.Text>
-                </View>
+
 
             </View>
         </View>
@@ -177,8 +181,13 @@ const styles = StyleSheet.create({
         width: SCORE_WIDTH,
         height: SCORE_HEIGHT,
         overflow: 'hidden',
-        padding: 5,
+        padding: 4,
         ...StyleSheet.absoluteFillObject
+    },
+    innerContainer: {
+        width: '100%',
+        height: "100%",
+        overflow: 'hidden'
     },
     pulse: {
         backgroundColor: SECONDARY,
