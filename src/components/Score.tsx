@@ -107,8 +107,8 @@ const Score = (props: Props) => {
     })
     const pulseTransform = [{ scaleX: scaleX }, { scaleY: scaleY }];
     const opacity = pulseAnimationState.interpolate({
-        inputRange: [0, 1],
-        outputRange: [AttentionConstants.LOWER_OPACITTY, 1]
+        inputRange: [0, 0.5, 1],
+        outputRange: [AttentionConstants.LOWER_OPACITTY, 1, 1]
     })
 
     /**

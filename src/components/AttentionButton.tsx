@@ -96,15 +96,10 @@ const AttentionButton = (props: Props) => {
     const transform = [{ scaleX: scaleX }, { scaleY: scaleY }]
 
     const opacity = animationState.interpolate({
-        inputRange: [0, 1],
-        outputRange: [1, AttentionConstants.LOWER_OPACITTY]
+        inputRange: [0, 0.5, 1],
+        outputRange: [1, 1, AttentionConstants.LOWER_OPACITTY]
     });
 
-
-    const textColor = colorState.interpolate({
-        inputRange: [0, 1],
-        outputRange: ['black', 'white']
-    })
 
     const reverseState = animationState.interpolate({
         inputRange: [0, 1],
