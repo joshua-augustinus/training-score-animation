@@ -4,3 +4,5 @@ export interface NavigationOptions {
     headerRight: () => React.ReactNode,
     headerTitle: string
 }
+
+export type ButtonState = 'default' | 'focused' | 'unfocused'

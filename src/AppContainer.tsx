@@ -7,11 +7,19 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 
 
+const stackConfig = {
+    defaultNavigationOptions:
+    {
+        headerShown: false
+    },
+
+}
+
 const InnerStack = createStackNavigator({
     Stack1: {
         screen: MasterScreen
     }
-})
+}, stackConfig)
 
 const RootStack = createDrawerNavigator({
     Home: {

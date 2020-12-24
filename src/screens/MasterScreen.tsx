@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Button, Text, TextInput, TouchableOpacity, View, BackHandler, Animated } from 'react-native';
+import { Button, Text, TextInput, TouchableOpacity, View, BackHandler, Animated, StyleSheet } from 'react-native';
 import { SafeAreaView, StackActions } from 'react-navigation';
 import { DrawerActions, NavigationDrawerProp } from 'react-navigation-drawer';
 import { Score } from '@src/components/Score';
+import { AttentionButtonContainer } from '@src/components/AttentionButtonContainer';
 
 
 
@@ -30,15 +31,17 @@ const MasterScreen = (props: Props) => {
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <View style={{ height: 50, backgroundColor: 'red', flexDirection: 'row', alignItems: 'center' }}>
+            <View style={styles.header}>
 
                 <TouchableOpacity style={{ backgroundColor: 'yellow' }}
                     onPress={() => onMenuPress()}>
                     <Text>Menu</Text>
                 </TouchableOpacity>
+                <Score value={value} />
+
             </View>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Score value={value} />
+                <AttentionButtonContainer onAnimationFinished={onMenuPress} />
             </View>
         </SafeAreaView>
 
@@ -49,3 +52,14 @@ const MasterScreen = (props: Props) => {
 MasterScreen.navigationOptions = {}
 
 export { MasterScreen }
+
+const styles = StyleSheet.create({
+    header: {
+        height: 50, flexDirection: 'row', alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 15,
+        borderBottomWidth: 1,
+        borderBottomColor: '#E7E7E7',
+        backgroundColor: '#F8F8F8',
+    }
+})
