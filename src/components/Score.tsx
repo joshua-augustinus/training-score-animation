@@ -45,13 +45,13 @@ const Score = (props: Props) => {
         const pulse1 = Animated.timing(pulseAnimationState, {
             useNativeDriver: true,
             toValue: 0.2,
-            duration: 1000,
+            duration: AttentionConstants.SECOND_DURATION,
         });
 
         const pulse2 = Animated.timing(pulseAnimationState, {
             useNativeDriver: true,
             toValue: 1,
-            duration: 200,
+            duration: AttentionConstants.FIRST_DURATION,
         });
 
         Animated.sequence([reset, pulse1, pulse2]).start(() => {

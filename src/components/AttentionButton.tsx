@@ -15,7 +15,8 @@ interface Props {
 
 const HEIGHT = 37;
 const GROW_VALUE = AttentionConstants.GROW;
-
+const FIRST_DURATION = AttentionConstants.FIRST_DURATION;
+const SECOND_DURATION = AttentionConstants.SECOND_DURATION;
 
 const getScaleValues = (width: number, height: number) => {
 
@@ -37,12 +38,12 @@ const AttentionButton = (props: Props) => {
         if (props.state === 'focused') {
             Animated.timing(animationState, {
                 useNativeDriver: true,
-                duration: 200,
+                duration: FIRST_DURATION,
                 toValue: 0.8
             }).start(() => {
                 Animated.timing(animationState, {
                     useNativeDriver: true,
-                    duration: 1000,
+                    duration: SECOND_DURATION,
                     toValue: 1
                 }).start(() => {
                     props.onAnimationFinished();
@@ -61,13 +62,21 @@ const AttentionButton = (props: Props) => {
         }
     }, [props.state])
 
+    /**
+     * Color animation
+     */
     useEffect(() => {
         if (props.state === 'focused') {
             Animated.timing(colorState, {
                 useNativeDriver: false,
-                duration: 1000,
-                toValue: 1
+                duration: FIRST_DURATION,
+                toValue: 0.8
             }).start(() => {
+                Animated.timing(colorState, {
+                    useNativeDriver: false,
+                    duration: SECOND_DURATION,
+                    toValue: 1
+                }).start();
             });
 
         } else if (props.state === 'default') {
@@ -82,12 +91,15 @@ const AttentionButton = (props: Props) => {
 
 
     const onLayout = (event) => {
-        const width = event.nativeEvent.layout.width;
-        const height = event.nativeEvent.layout.height;
-        console.log("Dimensions", width, height);
+        if (scaleValues.current.scaleX === 0) {
+            const width = event.nativeEvent.layout.width;
+            const height = event.nativeEvent.layout.height;
+            console.log("Dimensions", width, height);
 
-        scaleValues.current = getScaleValues(width, height);
-        console.log("Scale values", scaleValues.current);
+            scaleValues.current = getScaleValues(width, height);
+            console.log("Scale values", scaleValues.current);
+        }
+
     }
 
     const scaleX = animationState.interpolate({
@@ -108,8 +120,19 @@ const AttentionButton = (props: Props) => {
     });
 
 
-    const reverseState = animationState.interpolate({
-        inputRange: [0, 1],
+
+    const buttonColor = colorState.interpolate({
+        inputRange: [0, 0.8, 1],
+        outputRange: [DrivenColors.SECONDARY, DrivenColors.SECONDARY, DrivenColors.BUTTON_HIGHLIGHT]
+    })
+
+    const textColor = colorState.interpolate({
+        inputRange: [0, 0.8, 0.81, 1],
+        outputRange: ['black', 'black', 'white', 'white']
+    })
+
+    const linearOpacity = animationState.interpolate({
+        inputRange: [0, 0.01],
         outputRange: [1, 0]
     })
 
@@ -120,16 +143,16 @@ const AttentionButton = (props: Props) => {
                 <Animated.View style={[styles.container, styles.expandingView, { transform: transform, opacity: opacity }]} />
             </View>
             <View style={StyleSheet.absoluteFill}>
-                <Animated.View style={[styles.container, { backgroundColor: DrivenColors.BUTTON_HIGHLIGHT, opacity: animationState }]}>
-                    <Text style={[styles.text, { color: 'white' }]}>
+                <Animated.View style={[styles.container, { backgroundColor: buttonColor, opacity: 1 }]}>
+                    <Animated.Text style={[styles.text, { color: textColor }]}>
                         {props.text}
-                    </Text>
+                    </Animated.Text>
                 </Animated.View>
             </View>
+
             <Pressable onLayout={onLayout}
-                onPress={props.onPress}
-            >
-                <Animated.View style={[styles.container, props.style, { opacity: reverseState }]}>
+                onPress={props.onPress}>
+                <Animated.View style={[styles.container, props.style, { opacity: linearOpacity }]}>
                     <LinearGradient colors={['#FFCC00', DrivenColors.SECONDARY]} style={styles.gradientContainer}>
                         <Animated.Text style={[styles.text]}>
                             {props.text}
