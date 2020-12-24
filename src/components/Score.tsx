@@ -46,14 +46,12 @@ const Score = (props: Props) => {
             useNativeDriver: true,
             toValue: 0.2,
             duration: 1000,
-            easing: Easing.linear
         });
 
         const pulse2 = Animated.timing(pulseAnimationState, {
             useNativeDriver: true,
             toValue: 1,
             duration: 200,
-            easing: Easing.linear
         });
 
         Animated.sequence([reset, pulse1, pulse2]).start(() => {
@@ -204,6 +202,7 @@ const styles = StyleSheet.create({
     textContainer: {
         ...StyleSheet.absoluteFillObject,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: 'transparent'
     }
 })
