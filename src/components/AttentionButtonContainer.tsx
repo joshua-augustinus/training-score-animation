@@ -18,6 +18,9 @@ const getInitialData = () => {
         },
         {
             key: "2", displayText: "Test 2", state: 'default'
+        },
+        {
+            key: "3", displayText: "Test 3", state: 'default'
         }
     ]
 

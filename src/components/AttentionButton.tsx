@@ -1,7 +1,8 @@
 import { DrivenColors } from "@src/constants/Colors";
 import React, { useEffect, useRef } from "react"
-import { Animated, StyleSheet, Text, TouchableHighlight, View } from "react-native";
+import { Animated, Pressable, StyleSheet, Text, TouchableHighlight, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import LinearGradient from "react-native-linear-gradient";
 import { AttentionConstants } from "./AttentionConstants";
 
 interface Props {
@@ -99,14 +100,15 @@ const AttentionButton = (props: Props) => {
         outputRange: [1, AttentionConstants.LOWER_OPACITTY]
     });
 
-    const backgroundColor = colorState.interpolate({
-        inputRange: [0, 1],
-        outputRange: [DrivenColors.SECONDARY, DrivenColors.BUTTON_HIGHLIGHT]
-    })
 
     const textColor = colorState.interpolate({
         inputRange: [0, 1],
         outputRange: ['black', 'white']
+    })
+
+    const reverseState = animationState.interpolate({
+        inputRange: [0, 1],
+        outputRange: [1, 0]
     })
 
     return (
@@ -115,17 +117,27 @@ const AttentionButton = (props: Props) => {
             <View style={StyleSheet.absoluteFill}>
                 <Animated.View style={[styles.container, styles.expandingView, { transform: transform, opacity: opacity }]} />
             </View>
-            <TouchableOpacity onLayout={onLayout}
+            <View style={StyleSheet.absoluteFill}>
+                <Animated.View style={[styles.container, { backgroundColor: DrivenColors.BUTTON_HIGHLIGHT, opacity: animationState }]}>
+                    <Text style={[styles.text, { color: 'white' }]}>
+                        {props.text}
+                    </Text>
+                </Animated.View>
+            </View>
+            <Pressable onLayout={onLayout}
                 onPress={props.onPress}
             >
-                <Animated.View style={[styles.container, props.style, { backgroundColor: backgroundColor }]}>
-                    <Animated.Text style={[styles.text, { color: textColor }]}>
-                        {props.text}
-                    </Animated.Text>
+                <Animated.View style={[styles.container, props.style, { opacity: reverseState }]}>
+                    <LinearGradient colors={['#FFCC00', DrivenColors.SECONDARY]} style={styles.gradientContainer}>
+                        <Animated.Text style={[styles.text]}>
+                            {props.text}
+                        </Animated.Text>
+                    </LinearGradient>
+
                 </Animated.View>
 
 
-            </TouchableOpacity >
+            </Pressable >
         </View>
 
 
@@ -141,12 +153,16 @@ const styles = StyleSheet.create({
         marginRight: 5,
         marginTop: 6,
         marginBottom: 8,
+        justifyContent: "center",
+        borderColor: DrivenColors.SECONDARY,
+        height: HEIGHT,
+    },
+    gradientContainer: {
         paddingLeft: 16,
         paddingRight: 16,
-        borderColor: DrivenColors.SECONDARY,
-        justifyContent: "center",
         height: HEIGHT,
-
+        justifyContent: "center",
+        borderRadius: 24,
     },
     text: {
         textAlignVertical: 'center',
