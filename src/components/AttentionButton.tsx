@@ -1,10 +1,11 @@
 import { DrivenColors } from "@src/constants/Colors";
-import React, { useEffect, useRef } from "react"
-import { Animated, Easing, Pressable, StyleSheet, Text, TouchableHighlight, View } from "react-native";
-import { EasingFunctions } from "@src/constants/EasingFunctions";
+import React, { useEffect, useRef, useState } from "react"
+import { Animated, Pressable, StyleSheet, Text, TouchableHighlight, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { AttentionConstants } from "./AttentionConstants";
 import { EasingInfo } from "@src/types";
+import ReAnimated, { Easing } from "react-native-reanimated";
+
 
 interface Props {
     onPress: () => void,
@@ -20,29 +21,21 @@ interface Props {
 const HEIGHT = 37;
 const GROW_VALUE = AttentionConstants.GROW;
 
-const getScaleValues = (width: number, height: number) => {
-
-    const scaleX = (width + GROW_VALUE) / width;
-    const scaleY = (height + GROW_VALUE) / height;
-    return {
-        scaleX: scaleX, scaleY: scaleY
-    }
-}
+const EASING_FUNCTION = Easing.bezier(0.19, 1.0, 0.22, 1.0);
 
 const AttentionButton = (props: Props) => {
     const scaleValues: any = useRef({ scaleX: 0, scaleY: 0 });
-    const animationState = useRef(new Animated.Value(0)).current;
-    const colorState = useRef(new Animated.Value(0)).current;
-
+    const animationState = useRef(new ReAnimated.Value(0)).current;
+    const colorState = useRef(new ReAnimated.Value(0)).current;
+    const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
 
     useEffect(() => {
         if (props.state === 'focused') {
-            Animated.timing(animationState, {
-                useNativeDriver: true,
+            ReAnimated.timing(animationState, {
                 duration: props.animationDuration,
                 toValue: 1,
-                easing: props.easingInfo.function
+                easing: EASING_FUNCTION
 
             }).start(() => {
 
@@ -52,8 +45,8 @@ const AttentionButton = (props: Props) => {
             });
 
         } else if (props.state === 'default') {
-            Animated.timing(animationState, {
-                useNativeDriver: true,
+            ReAnimated.timing(animationState, {
+                easing: EASING_FUNCTION,
                 duration: 0.1,
                 toValue: 0
             }).start(() => {
@@ -67,21 +60,21 @@ const AttentionButton = (props: Props) => {
      */
     useEffect(() => {
         if (props.state === 'focused') {
-            Animated.timing(colorState, {
-                useNativeDriver: false,
+            ReAnimated.timing(colorState, {
                 duration: props.animationDuration,
                 toValue: 1,
-                easing: props.easingInfo.function
+                easing: EASING_FUNCTION
 
             }).start(() => {
 
             });
 
         } else if (props.state === 'default') {
-            Animated.timing(colorState, {
-                useNativeDriver: false,
+            ReAnimated.timing(colorState, {
                 duration: 0.1,
-                toValue: 0
+                toValue: 0,
+                easing: EASING_FUNCTION
+
             }).start();
         }
     }, [props.state])
@@ -89,47 +82,43 @@ const AttentionButton = (props: Props) => {
 
 
     const onLayout = (event) => {
-        if (scaleValues.current.scaleX === 0) {
+        if (dimensions.width === 0) {
             const width = event.nativeEvent.layout.width;
             const height = event.nativeEvent.layout.height;
-            console.log("Dimensions", width, height);
-
-            scaleValues.current = getScaleValues(width, height);
-            console.log("Scale values", scaleValues.current);
+            setDimensions({ width: width, height: height })
         }
 
     }
 
-    const scaleX = animationState.interpolate({
+    const width = ReAnimated.interpolate(animationState, {
         inputRange: [0, 0.99, 1],
-        outputRange: [1, scaleValues.current.scaleX, 1]
+        outputRange: [dimensions.width, dimensions.width + GROW_VALUE, dimensions.width]
     })
 
-    const scaleY = animationState.interpolate({
+    const height = ReAnimated.interpolate(animationState, {
         inputRange: [0, 0.99, 1],
-        outputRange: [1, scaleValues.current.scaleY, 1]
+        outputRange: [dimensions.height, dimensions.height + GROW_VALUE, dimensions.height]
     })
 
-    const transform = [{ scaleX: scaleX }, { scaleY: scaleY }]
 
-    const opacity = animationState.interpolate({
+    const opacity = ReAnimated.interpolate(animationState, {
         inputRange: [0, 0.8, 0.99, 1],
         outputRange: [1, 1, AttentionConstants.LOWER_OPACITTY, 0]
     });
 
 
 
-    const buttonColor = colorState.interpolate({
+    const buttonColor = ReAnimated.interpolateColors(colorState, {
         inputRange: [0, 0.8, 1, 2],
-        outputRange: [DrivenColors.SECONDARY, DrivenColors.SECONDARY, DrivenColors.BUTTON_HIGHLIGHT, DrivenColors.BUTTON_HIGHLIGHT]//We go over 2 just so that easeOutBack works
+        outputColorRange: [DrivenColors.SECONDARY, DrivenColors.SECONDARY, DrivenColors.BUTTON_HIGHLIGHT, DrivenColors.BUTTON_HIGHLIGHT]//We go over 2 just so that easeOutBack works
     })
 
-    const textColor = colorState.interpolate({
+    const textColor = ReAnimated.interpolateColors(colorState, {
         inputRange: [0, 0.8, 0.9, 1],
-        outputRange: ['black', 'black', 'white', 'white']
+        outputColorRange: ['black', 'black', 'white', 'white']
     })
 
-    const linearOpacity = animationState.interpolate({
+    const linearOpacity = ReAnimated.interpolate(animationState, {
         inputRange: [0, 0.01],
         outputRange: [1, 0]
     })
@@ -138,26 +127,30 @@ const AttentionButton = (props: Props) => {
         <View style={{ opacity: props.state === 'unfocused' ? 0 : 1 }}>
 
             <View style={StyleSheet.absoluteFill}>
-                <Animated.View style={[styles.container, styles.expandingView, { transform: transform, opacity: opacity }]} />
+                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <ReAnimated.View style={[styles.container, styles.expandingView, { width: width, height: height, opacity: opacity }]} />
+                </View>
             </View>
             <View style={StyleSheet.absoluteFill}>
-                <Animated.View style={[styles.container, { backgroundColor: buttonColor, opacity: 1 }]}>
-                    <Animated.Text style={[styles.text, { color: textColor }]}>
+                {/*@ts-ignore*/}
+                <ReAnimated.View style={[styles.container, { backgroundColor: buttonColor, opacity: 1 }]}>
+                    {/*@ts-ignore*/}
+                    <ReAnimated.Text style={[styles.text, { color: textColor }]}>
                         {props.text}
-                    </Animated.Text>
-                </Animated.View>
+                    </ReAnimated.Text>
+                </ReAnimated.View>
             </View>
 
-            <Pressable onLayout={onLayout}
+            <Pressable
                 onPress={props.onPress}>
-                <Animated.View style={[styles.container, props.style, { opacity: linearOpacity }]}>
-                    <LinearGradient colors={['#FFCC00', DrivenColors.SECONDARY]} style={styles.gradientContainer}>
+                <ReAnimated.View style={[styles.container, props.style, { opacity: linearOpacity }]}>
+                    <LinearGradient colors={['#FFCC00', DrivenColors.SECONDARY]} style={styles.gradientContainer} onLayout={onLayout}>
                         <Animated.Text style={[styles.text]}>
                             {props.text}
                         </Animated.Text>
                     </LinearGradient>
 
-                </Animated.View>
+                </ReAnimated.View>
 
 
             </Pressable >
@@ -195,7 +188,8 @@ const styles = StyleSheet.create({
         textAlign: "center"
     }, expandingView: {
         backgroundColor: DrivenColors.SECONDARY,
-        borderWidth: 0
+        borderWidth: 0,
+        borderRadius: 1000
     }
 
 });
