@@ -5,7 +5,8 @@ import Animated, { Easing } from "react-native-reanimated";
 import { AttentionConstants } from "./AttentionConstants";
 
 interface Props {
-    value: string
+    value: string,
+    animationDuration: number
 }
 
 const SCORE_HEIGHT = 35;
@@ -45,7 +46,7 @@ const Score = (props: Props) => {
         const pulse1 = Animated.timing(pulseAnimationState, {
             easing: EASING_FUNCTION,
             toValue: 1,
-            duration: AttentionConstants.FIRST_DURATION,
+            duration: props.animationDuration,
         });
 
         reset.start(() => {
@@ -82,7 +83,7 @@ const Score = (props: Props) => {
         Animated.timing(borderAnimationState, {
             easing: EASING_FUNCTION,
             toValue: 1,
-            duration: 2000
+            duration: props.animationDuration
         }).start(() => {
             Animated.timing(borderAnimationState, {
                 easing: EASING_FUNCTION,

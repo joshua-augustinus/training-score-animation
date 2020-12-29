@@ -44,7 +44,7 @@ const MasterScreen = (props: Props) => {
 
                 <TouchableOpacity onPress={resetButtons}><Text>Press me to reset</Text>
                 </TouchableOpacity>
-                <Score value={value} />
+                <Score value={value} animationDuration={parseInt(duration)} />
 
             </View>
 
