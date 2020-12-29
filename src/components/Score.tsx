@@ -11,8 +11,6 @@ interface Props {
 const SCORE_HEIGHT = 35;
 const SCORE_WIDTH = 60;
 const GROW_VALUE = AttentionConstants.GROW;
-const PULSE_X = (SCORE_WIDTH + GROW_VALUE) / SCORE_WIDTH
-const PULSE_Y = (SCORE_HEIGHT + GROW_VALUE) / SCORE_HEIGHT
 const SECONDARY = 'rgb(248, 145, 55)';
 
 const BORDER_COLOR = '#008ead';
@@ -97,16 +95,16 @@ const Score = (props: Props) => {
     /**
      * Animation for pulse
      */
-    const scaleX = Animated.interpolate(pulseAnimationState, {
+    const pulseWidth = Animated.interpolate(pulseAnimationState, {
         inputRange: [0, 1],
-        outputRange: [PULSE_X, 1]
+        outputRange: [SCORE_WIDTH + GROW_VALUE, 1]
     })
-    const scaleY = Animated.interpolate(pulseAnimationState, {
+    const pulseHeight = Animated.interpolate(pulseAnimationState, {
         inputRange: [0, 1],
-        outputRange: [PULSE_Y, 1]
+        outputRange: [SCORE_HEIGHT + GROW_VALUE, 1]
     })
-    const pulseTransform = [{ scaleX: scaleX }, { scaleY: scaleY }];
-    const opacity = Animated.interpolate(pulseAnimationState, {
+
+    const pulseOpacity = Animated.interpolate(pulseAnimationState, {
         inputRange: [0, 0.2, 1],
         outputRange: [AttentionConstants.LOWER_OPACITTY, AttentionConstants.MIDDLE_OPACITY, 1]
     })
@@ -143,10 +141,16 @@ const Score = (props: Props) => {
     return (
 
         <View>
-            <Animated.View style={{ ...styles.pulse, transform: pulseTransform, opacity: opacity }} >
+            <View style={styles.sizeContainer} >
+                <View style={styles.pulseContainer}>
+                    <Animated.View style={{ ...styles.pulse, width: pulseWidth, height: pulseHeight, opacity: pulseOpacity }} >
 
-            </Animated.View>
+                    </Animated.View>
+                </View>
+
+            </View>
             <View style={styles.container} >
+
                 <View style={StyleSheet.absoluteFill}>
                     {/*@ts-ignore*/}
                     <Animated.View style={{ ...styles.border, borderColor: borderColor }} />
@@ -185,12 +189,20 @@ const styles = StyleSheet.create({
         height: "100%",
         overflow: 'hidden'
     },
+    sizeContainer: {
+        height: SCORE_HEIGHT,
+        width: SCORE_WIDTH,
+    },
+    pulseContainer: {
+        ...StyleSheet.absoluteFillObject,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     pulse: {
         backgroundColor: SECONDARY,
         height: SCORE_HEIGHT,
         width: SCORE_WIDTH,
-        borderRadius: 20,
-        opacity: 0.1
+        borderRadius: 100,
     },
 
     border: {
