@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface DrawerTrainingTests : XCTestCase
+@interface ScoreAnimationTests : XCTestCase
 
 @end
 
-@implementation DrawerTrainingTests
+@implementation ScoreAnimationTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

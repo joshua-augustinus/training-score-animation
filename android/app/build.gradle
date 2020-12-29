@@ -127,7 +127,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.training.drawer"
+        applicationId "com.training.score"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

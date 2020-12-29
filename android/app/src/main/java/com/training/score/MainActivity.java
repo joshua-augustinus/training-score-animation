@@ -1,4 +1,4 @@
-package com.training.drawer;
+package com.training.score;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "DrawerTraining";
+        return "ScoreAnimation";
     }
 
     @Override

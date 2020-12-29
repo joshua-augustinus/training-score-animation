@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'DrawerTraining' do
+target 'ScoreAnimation' do
     config = use_native_modules!
     use_react_native!(:path => config["reactNativePath"])
   
 
-  target 'DrawerTrainingTests' do
+  target 'ScoreAnimationTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'DrawerTraining' do
   end
 end
 
-target 'DrawerTraining-tvOS' do
-  # Pods for DrawerTraining-tvOS
+target 'ScoreAnimation-tvOS' do
+  # Pods for ScoreAnimation-tvOS
 
-  target 'DrawerTraining-tvOSTests' do
+  target 'ScoreAnimation-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

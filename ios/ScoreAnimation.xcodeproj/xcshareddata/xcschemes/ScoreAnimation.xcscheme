@@ -9,15 +9,15 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "DrawerTraining-tvOS.app"
-               BlueprintName = "DrawerTraining-tvOS"
-               ReferencedContainer = "container:DrawerTraining.xcodeproj">
+               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
+               BuildableName = "ScoreAnimationTests.xctest"
+               BlueprintName = "ScoreAnimationTests"
+               ReferencedContainer = "container:ScoreAnimation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "DrawerTraining-tvOSTests.xctest"
-               BlueprintName = "DrawerTraining-tvOSTests"
-               ReferencedContainer = "container:DrawerTraining.xcodeproj">
+               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
+               BuildableName = "ScoreAnimationTests.xctest"
+               BlueprintName = "ScoreAnimationTests"
+               ReferencedContainer = "container:ScoreAnimation.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,10 +54,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "DrawerTraining-tvOS.app"
-            BlueprintName = "DrawerTraining-tvOS"
-            ReferencedContainer = "container:DrawerTraining.xcodeproj">
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "ScoreAnimation.app"
+            BlueprintName = "ScoreAnimation"
+            ReferencedContainer = "container:ScoreAnimation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,10 +71,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "DrawerTraining-tvOS.app"
-            BlueprintName = "DrawerTraining-tvOS"
-            ReferencedContainer = "container:DrawerTraining.xcodeproj">
+            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
+            BuildableName = "ScoreAnimation.app"
+            BlueprintName = "ScoreAnimation"
+            ReferencedContainer = "container:ScoreAnimation.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

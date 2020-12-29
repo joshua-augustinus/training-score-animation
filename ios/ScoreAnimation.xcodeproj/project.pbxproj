@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* DrawerTrainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DrawerTrainingTests.m */; };
+		00E356F31AD99517003FC87E /* ScoreAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ScoreAnimationTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		178B9E83E6FA737BCAC43FB2 /* libPods-DrawerTraining-DrawerTrainingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A22B681904B1372588BF0D /* libPods-DrawerTraining-DrawerTrainingTests.a */; };
+		178B9E83E6FA737BCAC43FB2 /* libPods-ScoreAnimation-ScoreAnimationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A22B681904B1372588BF0D /* libPods-ScoreAnimation-ScoreAnimationTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* DrawerTrainingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DrawerTrainingTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* ScoreAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ScoreAnimationTests.m */; };
 		4244B2182576E1450055456E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4244B2172576E1450055456E /* Launch Screen.storyboard */; };
 		4244B2192576E1450055456E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4244B2172576E1450055456E /* Launch Screen.storyboard */; };
 		5235A47856CB46E4BF9E97E4 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB9CCD10F4A74652967F5F0A /* Roboto-Bold.ttf */; };
@@ -23,12 +23,12 @@
 		6ED1C12E72F74696873A9491 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21177A46BBD04E2D8754B065 /* Roboto-Regular.ttf */; };
 		71C632ACA46D47C5BAAD2408 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 925D7BD9AFC24413AEE302FD /* Roboto-LightItalic.ttf */; };
 		7BB4A101B5C74D758AD8AB32 /* Linearicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FC797A0D2F5449E9F81AD5C /* Linearicons.ttf */; };
-		839AF671D16B202AA050CAF4 /* libPods-DrawerTraining.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C69203BEDD4694D2ECE30ACF /* libPods-DrawerTraining.a */; };
+		839AF671D16B202AA050CAF4 /* libPods-ScoreAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C69203BEDD4694D2ECE30ACF /* libPods-ScoreAnimation.a */; };
 		8D6439A36F204E5697972D61 /* BarlowCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 754275A03BE7485DAA36D25D /* BarlowCondensed-SemiBold.ttf */; };
 		9BA17509C67142EA878EC9E0 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 168C6E98AE9B4DD99B557521 /* Roboto-Italic.ttf */; };
-		D39B11D59019A3027077CBAB /* libPods-DrawerTraining-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656A4FE411E9895914DBF37A /* libPods-DrawerTraining-tvOS.a */; };
+		D39B11D59019A3027077CBAB /* libPods-ScoreAnimation-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 656A4FE411E9895914DBF37A /* libPods-ScoreAnimation-tvOS.a */; };
 		E4954424496A46DCB1132FD8 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2ECE2860D57743EBB74B90D7 /* Roboto-Light.ttf */; };
-		EC388FE595D23AF2C9F55349 /* libPods-DrawerTraining-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6355813F4F0CF60535CFEF0 /* libPods-DrawerTraining-tvOSTests.a */; };
+		EC388FE595D23AF2C9F55349 /* libPods-ScoreAnimation-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6355813F4F0CF60535CFEF0 /* libPods-ScoreAnimation-tvOSTests.a */; };
 		FAD8E97206D24BB9A141D269 /* BarlowCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5963B882EEA24D218DDF5F57 /* BarlowCondensed-LightItalic.ttf */; };
 /* End PBXBuildFile section */
 
@@ -38,14 +38,14 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = DrawerTraining;
+			remoteInfo = ScoreAnimation;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "DrawerTraining-tvOS";
+			remoteInfo = "ScoreAnimation-tvOS";
 		};
 		423DF145254B8C8F004739ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -164,40 +164,40 @@
 /* Begin PBXFileReference section */
 		006457A110CF42B08D868A06 /* BarlowCondensed-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BarlowCondensed-Light.ttf"; path = "../src/assets/fonts/BarlowCondensed-Light.ttf"; sourceTree = "<group>"; };
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* DrawerTrainingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawerTrainingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ScoreAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* DrawerTrainingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawerTrainingTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* DrawerTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawerTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DrawerTraining/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = DrawerTraining/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DrawerTraining/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DrawerTraining/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DrawerTraining/main.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ScoreAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoreAnimationTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ScoreAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ScoreAnimation/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ScoreAnimation/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ScoreAnimation/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ScoreAnimation/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ScoreAnimation/main.m; sourceTree = "<group>"; };
 		168C6E98AE9B4DD99B557521 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../src/assets/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		1B4AEEBB7224478CB0E35F75 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		1BA87E54241F48D2B3D451C1 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		20A22B681904B1372588BF0D /* libPods-DrawerTraining-DrawerTrainingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawerTraining-DrawerTrainingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20A22B681904B1372588BF0D /* libPods-ScoreAnimation-ScoreAnimationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScoreAnimation-ScoreAnimationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21177A46BBD04E2D8754B065 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		24467182C89D65C21B9C3EE0 /* Pods-DrawerTraining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTraining.release.xcconfig"; path = "Target Support Files/Pods-DrawerTraining/Pods-DrawerTraining.release.xcconfig"; sourceTree = "<group>"; };
+		24467182C89D65C21B9C3EE0 /* Pods-ScoreAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimation.release.xcconfig"; path = "Target Support Files/Pods-ScoreAnimation/Pods-ScoreAnimation.release.xcconfig"; sourceTree = "<group>"; };
 		2BA570E9C653481F9653522F /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* DrawerTraining-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrawerTraining-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* DrawerTraining-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DrawerTraining-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* ScoreAnimation-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScoreAnimation-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* ScoreAnimation-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ScoreAnimation-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECE2860D57743EBB74B90D7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
-		3435122D7BD16BD3F0B8ECF1 /* Pods-DrawerTraining-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTraining-tvOS.release.xcconfig"; path = "Target Support Files/Pods-DrawerTraining-tvOS/Pods-DrawerTraining-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		3435122D7BD16BD3F0B8ECF1 /* Pods-ScoreAnimation-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimation-tvOS.release.xcconfig"; path = "Target Support Files/Pods-ScoreAnimation-tvOS/Pods-ScoreAnimation-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		423DF132254B8C8E004739ED /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		4244B2022576DFF50055456E /* DrawerTraining-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawerTraining-Bridging-Header.h"; sourceTree = "<group>"; };
-		4244B2032576DFF50055456E /* DrawerTraining-tvOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawerTraining-tvOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		4244B2022576DFF50055456E /* ScoreAnimation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScoreAnimation-Bridging-Header.h"; sourceTree = "<group>"; };
+		4244B2032576DFF50055456E /* ScoreAnimation-tvOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScoreAnimation-tvOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		4244B2172576E1450055456E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		471E1B1014FB499EBA61BC31 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		4C5F1552BE6749C6B7256952 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
-		4D42DCE02C6AB0CD9F728C37 /* Pods-DrawerTrainingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTrainingTests.debug.xcconfig"; path = "Target Support Files/Pods-DrawerTrainingTests/Pods-DrawerTrainingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D42DCE02C6AB0CD9F728C37 /* Pods-ScoreAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimationTests.debug.xcconfig"; path = "Target Support Files/Pods-ScoreAnimationTests/Pods-ScoreAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5026527194CE480BA05F5DE3 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		5963B882EEA24D218DDF5F57 /* BarlowCondensed-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BarlowCondensed-LightItalic.ttf"; path = "../src/assets/fonts/BarlowCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
-		59974EAC04163ABE8BEC6B7F /* Pods-DrawerTraining-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTraining-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-DrawerTraining-tvOSTests/Pods-DrawerTraining-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		59974EAC04163ABE8BEC6B7F /* Pods-ScoreAnimation-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimation-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ScoreAnimation-tvOSTests/Pods-ScoreAnimation-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6010672F9F5B4D7892128296 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		609017EF537F4EF8A2EAE83C /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		6164DCD1C5C37BC9E2A9CF0F /* Pods-DrawerTraining-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTraining-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-DrawerTraining-tvOS/Pods-DrawerTraining-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		656A4FE411E9895914DBF37A /* libPods-DrawerTraining-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawerTraining-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6164DCD1C5C37BC9E2A9CF0F /* Pods-ScoreAnimation-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimation-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ScoreAnimation-tvOS/Pods-ScoreAnimation-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		656A4FE411E9895914DBF37A /* libPods-ScoreAnimation-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScoreAnimation-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		754275A03BE7485DAA36D25D /* BarlowCondensed-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BarlowCondensed-SemiBold.ttf"; path = "../src/assets/fonts/BarlowCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
 		7FC797A0D2F5449E9F81AD5C /* Linearicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Linearicons.ttf; path = ../src/assets/fonts/Linearicons.ttf; sourceTree = "<group>"; };
 		817161B916E4497795E26EB1 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
@@ -205,16 +205,16 @@
 		950DBC50CBC546EC81CB65DB /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		9B3DC02C530948D09387429D /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		9F1357572F3C4C4B8FB85B91 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		AC2B6BFC649011DA419A8E79 /* Pods-DrawerTraining-DrawerTrainingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTraining-DrawerTrainingTests.debug.xcconfig"; path = "Target Support Files/Pods-DrawerTraining-DrawerTrainingTests/Pods-DrawerTraining-DrawerTrainingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC2B6BFC649011DA419A8E79 /* Pods-ScoreAnimation-ScoreAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimation-ScoreAnimationTests.debug.xcconfig"; path = "Target Support Files/Pods-ScoreAnimation-ScoreAnimationTests/Pods-ScoreAnimation-ScoreAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD262A31DC964FC28D08D4E2 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		B5E382C91F4DA9581BF7CB9F /* Pods-DrawerTraining-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTraining-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-DrawerTraining-tvOSTests/Pods-DrawerTraining-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		BB7766FCBC164398A2A31DCE /* Pods-DrawerTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTrainingTests.release.xcconfig"; path = "Target Support Files/Pods-DrawerTrainingTests/Pods-DrawerTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5E382C91F4DA9581BF7CB9F /* Pods-ScoreAnimation-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimation-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-ScoreAnimation-tvOSTests/Pods-ScoreAnimation-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		BB7766FCBC164398A2A31DCE /* Pods-ScoreAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimationTests.release.xcconfig"; path = "Target Support Files/Pods-ScoreAnimationTests/Pods-ScoreAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
 		C46CB6842D0C4B6588E8FD5E /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
-		C6355813F4F0CF60535CFEF0 /* libPods-DrawerTraining-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawerTraining-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C69203BEDD4694D2ECE30ACF /* libPods-DrawerTraining.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawerTraining.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D38838EB29435756C671ACA2 /* Pods-DrawerTraining-DrawerTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTraining-DrawerTrainingTests.release.xcconfig"; path = "Target Support Files/Pods-DrawerTraining-DrawerTrainingTests/Pods-DrawerTraining-DrawerTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6355813F4F0CF60535CFEF0 /* libPods-ScoreAnimation-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScoreAnimation-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C69203BEDD4694D2ECE30ACF /* libPods-ScoreAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScoreAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D38838EB29435756C671ACA2 /* Pods-ScoreAnimation-ScoreAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimation-ScoreAnimationTests.release.xcconfig"; path = "Target Support Files/Pods-ScoreAnimation-ScoreAnimationTests/Pods-ScoreAnimation-ScoreAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB9CCD10F4A74652967F5F0A /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		DD64AB9658E6641F60654374 /* Pods-DrawerTraining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerTraining.debug.xcconfig"; path = "Target Support Files/Pods-DrawerTraining/Pods-DrawerTraining.debug.xcconfig"; sourceTree = "<group>"; };
+		DD64AB9658E6641F60654374 /* Pods-ScoreAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScoreAnimation.debug.xcconfig"; path = "Target Support Files/Pods-ScoreAnimation/Pods-ScoreAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 		DDA8E511903845A189B425E2 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -226,7 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				178B9E83E6FA737BCAC43FB2 /* libPods-DrawerTraining-DrawerTrainingTests.a in Frameworks */,
+				178B9E83E6FA737BCAC43FB2 /* libPods-ScoreAnimation-ScoreAnimationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				839AF671D16B202AA050CAF4 /* libPods-DrawerTraining.a in Frameworks */,
+				839AF671D16B202AA050CAF4 /* libPods-ScoreAnimation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39B11D59019A3027077CBAB /* libPods-DrawerTraining-tvOS.a in Frameworks */,
+				D39B11D59019A3027077CBAB /* libPods-ScoreAnimation-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,20 +250,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC388FE595D23AF2C9F55349 /* libPods-DrawerTraining-tvOSTests.a in Frameworks */,
+				EC388FE595D23AF2C9F55349 /* libPods-ScoreAnimation-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* DrawerTrainingTests */ = {
+		00E356EF1AD99517003FC87E /* ScoreAnimationTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* DrawerTrainingTests.m */,
+				00E356F21AD99517003FC87E /* ScoreAnimationTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = DrawerTrainingTests;
+			path = ScoreAnimationTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -277,21 +277,21 @@
 		0A8CD436179912CD33EB85E5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DD64AB9658E6641F60654374 /* Pods-DrawerTraining.debug.xcconfig */,
-				24467182C89D65C21B9C3EE0 /* Pods-DrawerTraining.release.xcconfig */,
-				6164DCD1C5C37BC9E2A9CF0F /* Pods-DrawerTraining-tvOS.debug.xcconfig */,
-				3435122D7BD16BD3F0B8ECF1 /* Pods-DrawerTraining-tvOS.release.xcconfig */,
-				59974EAC04163ABE8BEC6B7F /* Pods-DrawerTraining-tvOSTests.debug.xcconfig */,
-				B5E382C91F4DA9581BF7CB9F /* Pods-DrawerTraining-tvOSTests.release.xcconfig */,
-				4D42DCE02C6AB0CD9F728C37 /* Pods-DrawerTrainingTests.debug.xcconfig */,
-				BB7766FCBC164398A2A31DCE /* Pods-DrawerTrainingTests.release.xcconfig */,
-				AC2B6BFC649011DA419A8E79 /* Pods-DrawerTraining-DrawerTrainingTests.debug.xcconfig */,
-				D38838EB29435756C671ACA2 /* Pods-DrawerTraining-DrawerTrainingTests.release.xcconfig */,
+				DD64AB9658E6641F60654374 /* Pods-ScoreAnimation.debug.xcconfig */,
+				24467182C89D65C21B9C3EE0 /* Pods-ScoreAnimation.release.xcconfig */,
+				6164DCD1C5C37BC9E2A9CF0F /* Pods-ScoreAnimation-tvOS.debug.xcconfig */,
+				3435122D7BD16BD3F0B8ECF1 /* Pods-ScoreAnimation-tvOS.release.xcconfig */,
+				59974EAC04163ABE8BEC6B7F /* Pods-ScoreAnimation-tvOSTests.debug.xcconfig */,
+				B5E382C91F4DA9581BF7CB9F /* Pods-ScoreAnimation-tvOSTests.release.xcconfig */,
+				4D42DCE02C6AB0CD9F728C37 /* Pods-ScoreAnimationTests.debug.xcconfig */,
+				BB7766FCBC164398A2A31DCE /* Pods-ScoreAnimationTests.release.xcconfig */,
+				AC2B6BFC649011DA419A8E79 /* Pods-ScoreAnimation-ScoreAnimationTests.debug.xcconfig */,
+				D38838EB29435756C671ACA2 /* Pods-ScoreAnimation-ScoreAnimationTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* DrawerTraining */ = {
+		13B07FAE1A68108700A75B9A /* ScoreAnimation */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -300,11 +300,11 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				4244B2022576DFF50055456E /* DrawerTraining-Bridging-Header.h */,
-				4244B2032576DFF50055456E /* DrawerTraining-tvOS-Bridging-Header.h */,
+				4244B2022576DFF50055456E /* ScoreAnimation-Bridging-Header.h */,
+				4244B2032576DFF50055456E /* ScoreAnimation-tvOS-Bridging-Header.h */,
 				4244B2172576E1450055456E /* Launch Screen.storyboard */,
 			);
-			name = DrawerTraining;
+			name = ScoreAnimation;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -312,10 +312,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				C69203BEDD4694D2ECE30ACF /* libPods-DrawerTraining.a */,
-				656A4FE411E9895914DBF37A /* libPods-DrawerTraining-tvOS.a */,
-				C6355813F4F0CF60535CFEF0 /* libPods-DrawerTraining-tvOSTests.a */,
-				20A22B681904B1372588BF0D /* libPods-DrawerTraining-DrawerTrainingTests.a */,
+				C69203BEDD4694D2ECE30ACF /* libPods-ScoreAnimation.a */,
+				656A4FE411E9895914DBF37A /* libPods-ScoreAnimation-tvOS.a */,
+				C6355813F4F0CF60535CFEF0 /* libPods-ScoreAnimation-tvOSTests.a */,
+				20A22B681904B1372588BF0D /* libPods-ScoreAnimation-ScoreAnimationTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -354,9 +354,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* DrawerTraining */,
+				13B07FAE1A68108700A75B9A /* ScoreAnimation */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* DrawerTrainingTests */,
+				00E356EF1AD99517003FC87E /* ScoreAnimationTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				0A8CD436179912CD33EB85E5 /* Pods */,
@@ -370,10 +370,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* DrawerTraining.app */,
-				00E356EE1AD99517003FC87E /* DrawerTrainingTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* DrawerTraining-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* DrawerTraining-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* ScoreAnimation.app */,
+				00E356EE1AD99517003FC87E /* ScoreAnimationTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* ScoreAnimation-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* ScoreAnimation-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -413,9 +413,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* DrawerTrainingTests */ = {
+		00E356ED1AD99517003FC87E /* ScoreAnimationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DrawerTrainingTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ScoreAnimationTests" */;
 			buildPhases = (
 				4FDFD957848BA1FF6287ECA5 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -428,14 +428,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = DrawerTrainingTests;
-			productName = DrawerTrainingTests;
-			productReference = 00E356EE1AD99517003FC87E /* DrawerTrainingTests.xctest */;
+			name = ScoreAnimationTests;
+			productName = ScoreAnimationTests;
+			productReference = 00E356EE1AD99517003FC87E /* ScoreAnimationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* DrawerTraining */ = {
+		13B07F861A680F5B00A75B9A /* ScoreAnimation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DrawerTraining" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ScoreAnimation" */;
 			buildPhases = (
 				683E74B3EB621B966E1014F0 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -449,14 +449,14 @@
 			);
 			dependencies = (
 			);
-			name = DrawerTraining;
-			productName = DrawerTraining;
-			productReference = 13B07F961A680F5B00A75B9A /* DrawerTraining.app */;
+			name = ScoreAnimation;
+			productName = ScoreAnimation;
+			productReference = 13B07F961A680F5B00A75B9A /* ScoreAnimation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* DrawerTraining-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* ScoreAnimation-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DrawerTraining-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ScoreAnimation-tvOS" */;
 			buildPhases = (
 				BB3B066B63E2A4A2BF9FE1A3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -469,14 +469,14 @@
 			);
 			dependencies = (
 			);
-			name = "DrawerTraining-tvOS";
-			productName = "DrawerTraining-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* DrawerTraining-tvOS.app */;
+			name = "ScoreAnimation-tvOS";
+			productName = "ScoreAnimation-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* ScoreAnimation-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* DrawerTraining-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* ScoreAnimation-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DrawerTraining-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ScoreAnimation-tvOSTests" */;
 			buildPhases = (
 				2040B080E515288D04333A82 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -488,9 +488,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "DrawerTraining-tvOSTests";
-			productName = "DrawerTraining-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* DrawerTraining-tvOSTests.xctest */;
+			name = "ScoreAnimation-tvOSTests";
+			productName = "ScoreAnimation-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* ScoreAnimation-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -521,7 +521,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DrawerTraining" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ScoreAnimation" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -541,10 +541,10 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* DrawerTraining */,
-				00E356ED1AD99517003FC87E /* DrawerTrainingTests */,
-				2D02E47A1E0B4A5D006451C7 /* DrawerTraining-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* DrawerTraining-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* ScoreAnimation */,
+				00E356ED1AD99517003FC87E /* ScoreAnimationTests */,
+				2D02E47A1E0B4A5D006451C7 /* ScoreAnimation-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* ScoreAnimation-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -738,7 +738,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DrawerTraining-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ScoreAnimation-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -774,7 +774,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DrawerTraining-DrawerTrainingTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ScoreAnimation-ScoreAnimationTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -796,7 +796,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DrawerTraining-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ScoreAnimation-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -809,7 +809,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrawerTraining/Pods-DrawerTraining-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ScoreAnimation/Pods-ScoreAnimation-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -850,7 +850,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrawerTraining/Pods-DrawerTraining-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScoreAnimation/Pods-ScoreAnimation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A48E29D0643E00FA8A48A435 /* [CP] Copy Pods Resources */ = {
@@ -859,7 +859,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DrawerTraining-DrawerTrainingTests/Pods-DrawerTraining-DrawerTrainingTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ScoreAnimation-ScoreAnimationTests/Pods-ScoreAnimation-ScoreAnimationTests-resources.sh",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -900,7 +900,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DrawerTraining-DrawerTrainingTests/Pods-DrawerTraining-DrawerTrainingTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScoreAnimation-ScoreAnimationTests/Pods-ScoreAnimation-ScoreAnimationTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB3B066B63E2A4A2BF9FE1A3 /* [CP] Check Pods Manifest.lock */ = {
@@ -918,7 +918,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DrawerTraining-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ScoreAnimation-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -970,7 +970,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* DrawerTrainingTests.m in Sources */,
+				00E356F31AD99517003FC87E /* ScoreAnimationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,7 +996,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* DrawerTrainingTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* ScoreAnimationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1005,12 +1005,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* DrawerTraining */;
+			target = 13B07F861A680F5B00A75B9A /* ScoreAnimation */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* DrawerTraining-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* ScoreAnimation-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1018,14 +1018,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC2B6BFC649011DA419A8E79 /* Pods-DrawerTraining-DrawerTrainingTests.debug.xcconfig */;
+			baseConfigurationReference = AC2B6BFC649011DA419A8E79 /* Pods-ScoreAnimation-ScoreAnimationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = DrawerTrainingTests/Info.plist;
+				INFOPLIST_FILE = ScoreAnimationTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1035,17 +1035,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawerTraining.app/DrawerTraining";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoreAnimation.app/ScoreAnimation";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D38838EB29435756C671ACA2 /* Pods-DrawerTraining-DrawerTrainingTests.release.xcconfig */;
+			baseConfigurationReference = D38838EB29435756C671ACA2 /* Pods-ScoreAnimation-ScoreAnimationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = DrawerTrainingTests/Info.plist;
+				INFOPLIST_FILE = ScoreAnimationTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1055,19 +1055,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawerTraining.app/DrawerTraining";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoreAnimation.app/ScoreAnimation";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD64AB9658E6641F60654374 /* Pods-DrawerTraining.debug.xcconfig */;
+			baseConfigurationReference = DD64AB9658E6641F60654374 /* Pods-ScoreAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				INFOPLIST_FILE = DrawerTraining/Info.plist;
+				INFOPLIST_FILE = ScoreAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1075,8 +1075,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = DrawerTraining;
-				SWIFT_OBJC_BRIDGING_HEADER = "DrawerTraining-Bridging-Header.h";
+				PRODUCT_NAME = ScoreAnimation;
+				SWIFT_OBJC_BRIDGING_HEADER = "ScoreAnimation-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1085,12 +1085,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24467182C89D65C21B9C3EE0 /* Pods-DrawerTraining.release.xcconfig */;
+			baseConfigurationReference = 24467182C89D65C21B9C3EE0 /* Pods-ScoreAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = DrawerTraining/Info.plist;
+				INFOPLIST_FILE = ScoreAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1098,8 +1098,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = DrawerTraining;
-				SWIFT_OBJC_BRIDGING_HEADER = "DrawerTraining-Bridging-Header.h";
+				PRODUCT_NAME = ScoreAnimation;
+				SWIFT_OBJC_BRIDGING_HEADER = "ScoreAnimation-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1107,7 +1107,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6164DCD1C5C37BC9E2A9CF0F /* Pods-DrawerTraining-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 6164DCD1C5C37BC9E2A9CF0F /* Pods-ScoreAnimation-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1119,17 +1119,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "DrawerTraining-tvOS/Info.plist";
+				INFOPLIST_FILE = "ScoreAnimation-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.DrawerTraining-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ScoreAnimation-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_OBJC_BRIDGING_HEADER = "DrawerTraining-tvOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScoreAnimation-tvOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1139,7 +1139,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3435122D7BD16BD3F0B8ECF1 /* Pods-DrawerTraining-tvOS.release.xcconfig */;
+			baseConfigurationReference = 3435122D7BD16BD3F0B8ECF1 /* Pods-ScoreAnimation-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1151,17 +1151,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "DrawerTraining-tvOS/Info.plist";
+				INFOPLIST_FILE = "ScoreAnimation-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.DrawerTraining-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ScoreAnimation-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_OBJC_BRIDGING_HEADER = "DrawerTraining-tvOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ScoreAnimation-tvOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
@@ -1170,7 +1170,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59974EAC04163ABE8BEC6B7F /* Pods-DrawerTraining-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 59974EAC04163ABE8BEC6B7F /* Pods-ScoreAnimation-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1180,24 +1180,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "DrawerTraining-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "ScoreAnimation-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.DrawerTraining-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ScoreAnimation-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawerTraining-tvOS.app/DrawerTraining-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoreAnimation-tvOS.app/ScoreAnimation-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5E382C91F4DA9581BF7CB9F /* Pods-DrawerTraining-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = B5E382C91F4DA9581BF7CB9F /* Pods-ScoreAnimation-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1207,17 +1207,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "DrawerTraining-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "ScoreAnimation-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.DrawerTraining-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ScoreAnimation-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrawerTraining-tvOS.app/DrawerTraining-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoreAnimation-tvOS.app/ScoreAnimation-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1336,7 +1336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DrawerTrainingTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ScoreAnimationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1345,7 +1345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DrawerTraining" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ScoreAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1354,7 +1354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DrawerTraining-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ScoreAnimation-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1363,7 +1363,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "DrawerTraining-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ScoreAnimation-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1372,7 +1372,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DrawerTraining" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ScoreAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

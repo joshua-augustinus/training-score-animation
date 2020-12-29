@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.training.drawer">
+  package="com.training.score">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

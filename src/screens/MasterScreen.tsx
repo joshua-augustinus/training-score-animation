@@ -43,7 +43,7 @@ const MasterScreen = (props: Props) => {
             </View>
             <Picker
                 selectedValue={pickerState}
-                style={{ height: 50, width: 300 }}
+                style={{ height: 50, width: 200 }}
                 onValueChange={(itemValue, itemIndex) =>
                     setPickerState(itemIndex)
                 }>

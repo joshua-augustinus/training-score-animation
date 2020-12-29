@@ -1,4 +1,4 @@
-package com.training.drawer;
+package com.training.score;
 
 import android.app.Application;
 
