@@ -21,6 +21,9 @@ const MasterScreen = (props: Props) => {
     const [value, setValue] = useState("0.0");
     const [pickerState, setPickerState] = useState<number>(0);
     const [duration, setDuration] = useState("2000");
+    const [soundDelay, setSoundDelay] = useState("200");
+
+
     useEffect(() => {
 
     }, []);
@@ -61,8 +64,13 @@ const MasterScreen = (props: Props) => {
                 <Text>Duration (ms): </Text>
                 <TextInput keyboardType='number-pad' value={duration} onChangeText={(text) => setDuration((text))}></TextInput>
             </View>
+            <View style={styles.rowContainer}>
+                <Text>Start sound delay (ms): </Text>
+                <TextInput keyboardType='number-pad' value={soundDelay} onChangeText={setSoundDelay}></TextInput>
+            </View>
+
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <AttentionButtonContainer animationDuration={parseInt(duration)} onAnimationFinished={onMenuPress} easingInfo={EasingFunctionsArray[pickerState]} />
+                <AttentionButtonContainer soundDelay={parseInt(soundDelay)} animationDuration={parseInt(duration)} onAnimationFinished={onMenuPress} easingInfo={EasingFunctionsArray[pickerState]} />
             </View>
         </SafeAreaView >
 

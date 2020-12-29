@@ -1,3 +1,4 @@
+import { PlaySound } from "@src/services/SoundService"
 import { ButtonState, EasingInfo } from "@src/types"
 import React, { useEffect, useRef, useState } from "react"
 import { View } from "react-native"
@@ -30,7 +31,8 @@ const getInitialData = () => {
 interface Props {
     onAnimationFinished: () => void,
     easingInfo: EasingInfo,
-    animationDuration: number
+    animationDuration: number,
+    soundDelay: number
 }
 
 
@@ -71,6 +73,11 @@ const AttentionButtonContainer = (props: Props) => {
         }
 
         setData(newData);
+        setTimeout(() => {
+            PlaySound();
+
+        }, props.soundDelay)
+
     }
 
     return <View>
