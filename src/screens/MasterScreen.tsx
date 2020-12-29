@@ -21,18 +21,20 @@ const MasterScreen = (props: Props) => {
     const [value, setValue] = useState("0.0");
     const [duration, setDuration] = useState("2000");
     const [soundDelay, setSoundDelay] = useState("200");
-
+    const [newData, setNewData] = useState(null);
 
     useEffect(() => {
 
     }, []);
 
-    const onMenuPress = () => {
+    const onPulseAnimationFinished = () => {
         score.current = score.current + 0.1;
         setValue(score.current.toFixed(1));
     }
 
-
+    const resetButtons = () => {
+        setNewData(new Date())
+    }
 
 
     return (
@@ -40,7 +42,8 @@ const MasterScreen = (props: Props) => {
             <View style={styles.header}>
 
 
-                <Text>...</Text>
+                <TouchableOpacity onPress={resetButtons}><Text>Press me to reset</Text>
+                </TouchableOpacity>
                 <Score value={value} />
 
             </View>
@@ -56,7 +59,7 @@ const MasterScreen = (props: Props) => {
             </View>
 
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <AttentionButtonContainer soundDelay={parseInt(soundDelay)} animationDuration={parseInt(duration)} onAnimationFinished={onMenuPress} />
+                <AttentionButtonContainer newData={newData} soundDelay={parseInt(soundDelay)} animationDuration={parseInt(duration)} onAnimationFinished={onPulseAnimationFinished} />
             </View>
         </SafeAreaView >
 

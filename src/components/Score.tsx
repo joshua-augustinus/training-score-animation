@@ -97,11 +97,11 @@ const Score = (props: Props) => {
      */
     const pulseWidth = Animated.interpolate(pulseAnimationState, {
         inputRange: [0, 1],
-        outputRange: [SCORE_WIDTH + GROW_VALUE, 1]
+        outputRange: [SCORE_WIDTH + GROW_VALUE, SCORE_WIDTH]
     })
     const pulseHeight = Animated.interpolate(pulseAnimationState, {
         inputRange: [0, 1],
-        outputRange: [SCORE_HEIGHT + GROW_VALUE, 1]
+        outputRange: [SCORE_HEIGHT + GROW_VALUE, SCORE_HEIGHT]
     })
 
     const pulseOpacity = Animated.interpolate(pulseAnimationState, {

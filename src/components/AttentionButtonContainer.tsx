@@ -7,7 +7,8 @@ import { AttentionButton } from "./AttentionButton"
 interface Props {
     onAnimationFinished: () => void,
     animationDuration: number,
-    soundDelay: number
+    soundDelay: number,
+    newData: any
 }
 
 interface Data {
@@ -46,7 +47,7 @@ const AttentionButtonContainer = (props: Props) => {
 
 
         setData(getInitialData());
-    }, [props.animationDuration, props.soundDelay]);
+    }, [props.animationDuration, props.soundDelay, props.newData]);
 
     const onAnimationFinished = (index: number) => {
         setTimeout(() => {
