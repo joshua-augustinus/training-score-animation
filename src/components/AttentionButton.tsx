@@ -21,8 +21,6 @@ interface Props {
 const HEIGHT = 37;
 const GROW_VALUE = AttentionConstants.GROW;
 
-const EASING_FUNCTION = Easing.bezier(0.19, 1.0, 0.22, 1.0);
-
 const AttentionButton = (props: Props) => {
     const scaleValues: any = useRef({ scaleX: 0, scaleY: 0 });
     const animationState = useRef(new ReAnimated.Value(0)).current;
@@ -35,7 +33,7 @@ const AttentionButton = (props: Props) => {
             ReAnimated.timing(animationState, {
                 duration: props.animationDuration,
                 toValue: 1,
-                easing: EASING_FUNCTION
+                easing: props.easingInfo.function
 
             }).start(() => {
 
@@ -46,7 +44,7 @@ const AttentionButton = (props: Props) => {
 
         } else if (props.state === 'default') {
             ReAnimated.timing(animationState, {
-                easing: EASING_FUNCTION,
+                easing: props.easingInfo.function,
                 duration: 0.1,
                 toValue: 0
             }).start(() => {
@@ -63,7 +61,7 @@ const AttentionButton = (props: Props) => {
             ReAnimated.timing(colorState, {
                 duration: props.animationDuration,
                 toValue: 1,
-                easing: EASING_FUNCTION
+                easing: props.easingInfo.function
 
             }).start(() => {
 
@@ -73,7 +71,7 @@ const AttentionButton = (props: Props) => {
             ReAnimated.timing(colorState, {
                 duration: 0.1,
                 toValue: 0,
-                easing: EASING_FUNCTION
+                easing: props.easingInfo.function
 
             }).start();
         }

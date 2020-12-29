@@ -1,5 +1,5 @@
 import { EasingInfo } from '@src/types';
-import { Easing } from 'react-native';
+import { Easing } from 'react-native-reanimated';
 
 const EasingFunctions = {
     linear: Easing.linear,
