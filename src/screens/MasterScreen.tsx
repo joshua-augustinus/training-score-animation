@@ -4,7 +4,9 @@ import { SafeAreaView, StackActions } from 'react-navigation';
 import { DrawerActions, NavigationDrawerProp } from 'react-navigation-drawer';
 import { Score } from '@src/components/Score';
 import { AttentionButtonContainer } from '@src/components/AttentionButtonContainer';
-
+import { Picker } from '@react-native-picker/picker';
+import { EasingFunctionsArray } from '@src/constants/EasingFunctions'
+import { EasingInfo } from '@src/types';
 
 
 /**
@@ -17,6 +19,7 @@ type Props = {
 const MasterScreen = (props: Props) => {
     const score = useRef(0);
     const [value, setValue] = useState("0.0");
+    const [pickerState, setPickerState] = useState<number>(0);
     useEffect(() => {
 
     }, []);
@@ -33,15 +36,24 @@ const MasterScreen = (props: Props) => {
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.header}>
 
-                <TouchableOpacity style={{ backgroundColor: 'yellow' }}
-                    onPress={() => onMenuPress()}>
-                    <Text>Menu</Text>
-                </TouchableOpacity>
+
+                <Text>Select an easing function below</Text>
                 <Score value={value} />
 
             </View>
+            <Picker
+                selectedValue={pickerState}
+                style={{ height: 50, width: 300 }}
+                onValueChange={(itemValue, itemIndex) =>
+                    setPickerState(itemIndex)
+                }>
+                {EasingFunctionsArray.map((item, index) => {
+                    return <Picker.Item key={item.name} label={item.name} value={index} />
+
+                })}
+            </Picker>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <AttentionButtonContainer onAnimationFinished={onMenuPress} />
+                <AttentionButtonContainer onAnimationFinished={onMenuPress} easingInfo={EasingFunctionsArray[pickerState]} />
             </View>
         </SafeAreaView>
 

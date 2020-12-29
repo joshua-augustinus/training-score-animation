@@ -1,5 +1,5 @@
-import { ButtonState } from "@src/types"
-import React, { useRef, useState } from "react"
+import { ButtonState, EasingInfo } from "@src/types"
+import React, { useEffect, useRef, useState } from "react"
 import { View } from "react-native"
 import Animated from "react-native-reanimated"
 import { AttentionButton } from "./AttentionButton"
@@ -7,7 +7,7 @@ import { AttentionButton } from "./AttentionButton"
 interface Data {
     key: string,
     displayText: string,
-    state: ButtonState
+    state: ButtonState,
 }
 
 
@@ -28,7 +28,8 @@ const getInitialData = () => {
 }
 
 interface Props {
-    onAnimationFinished: () => void
+    onAnimationFinished: () => void,
+    easingInfo: EasingInfo
 }
 
 
@@ -36,11 +37,18 @@ const AttentionButtonContainer = (props: Props) => {
     const [data, setData] = useState(getInitialData());
     const pressedIndex = useRef(-1);
 
+    useEffect(() => {
+        //reset
+
+
+        setData(getInitialData());
+    }, [props.easingInfo]);
+
     const onAnimationFinished = (index: number) => {
-        setTimeout(() => {
+        /*setTimeout(() => {
             props.onAnimationFinished();
 
-        }, 1000);
+        }, 1000);*/
     }
 
     const onButtonPressed = (index: number) => {
@@ -59,7 +67,7 @@ const AttentionButtonContainer = (props: Props) => {
 
     return <View>
         {data.map((item, index) => {
-            return <AttentionButton onAnimationFinished={() => onAnimationFinished(index)} state={item.state} key={item.key} text={item.displayText} onPress={() => onButtonPressed(index)} />
+            return <AttentionButton easingInfo={props.easingInfo} onAnimationFinished={() => onAnimationFinished(index)} state={item.state} key={item.key} text={item.displayText} onPress={() => onButtonPressed(index)} />
 
         })}
 

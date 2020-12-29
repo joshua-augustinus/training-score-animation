@@ -6,3 +6,8 @@ export interface NavigationOptions {
 }
 
 export type ButtonState = 'default' | 'focused' | 'unfocused'
+
+export interface EasingInfo {
+    name: string,
+    function: any
+}

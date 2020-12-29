@@ -1,17 +1,20 @@
 import { DrivenColors } from "@src/constants/Colors";
 import React, { useEffect, useRef } from "react"
-import { Animated, Pressable, StyleSheet, Text, TouchableHighlight, View } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { Animated, Easing, Pressable, StyleSheet, Text, TouchableHighlight, View } from "react-native";
+import { EasingFunctions } from "@src/constants/EasingFunctions";
 import LinearGradient from "react-native-linear-gradient";
 import { AttentionConstants } from "./AttentionConstants";
+import { EasingInfo } from "@src/types";
 
 interface Props {
     onPress: () => void,
     text: string,
     state: 'default' | 'focused' | 'unfocused',
     style?: any,
-    onAnimationFinished: () => void
+    onAnimationFinished: () => void,
+    easingInfo: EasingInfo
 }
+
 
 const HEIGHT = 37;
 const GROW_VALUE = AttentionConstants.GROW;
@@ -38,17 +41,15 @@ const AttentionButton = (props: Props) => {
         if (props.state === 'focused') {
             Animated.timing(animationState, {
                 useNativeDriver: true,
-                duration: FIRST_DURATION,
-                toValue: 0.8
-            }).start(() => {
-                Animated.timing(animationState, {
-                    useNativeDriver: true,
-                    duration: SECOND_DURATION,
-                    toValue: 1
-                }).start(() => {
-                    props.onAnimationFinished();
+                duration: FIRST_DURATION + SECOND_DURATION,
+                toValue: 1,
+                easing: props.easingInfo.function
 
-                })
+            }).start(() => {
+
+                props.onAnimationFinished();
+
+
             });
 
         } else if (props.state === 'default') {
@@ -115,8 +116,8 @@ const AttentionButton = (props: Props) => {
     const transform = [{ scaleX: scaleX }, { scaleY: scaleY }]
 
     const opacity = animationState.interpolate({
-        inputRange: [0, 0.8, 1],
-        outputRange: [1, AttentionConstants.MIDDLE_OPACITY, AttentionConstants.LOWER_OPACITTY]
+        inputRange: [0, 0.8, 0.99, 1],
+        outputRange: [1, 1, AttentionConstants.LOWER_OPACITTY, 0]
     });
 
 
