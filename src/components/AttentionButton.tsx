@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useState } from "react"
 import { Animated, Pressable, StyleSheet, Text, TouchableHighlight, View } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { AttentionConstants } from "./AttentionConstants";
-import { EasingInfo } from "@src/types";
 import ReAnimated, { Easing } from "react-native-reanimated";
+import { EasingFunctions } from "@src/constants/EasingFunctions";
 
 
 interface Props {
@@ -13,16 +13,14 @@ interface Props {
     state: 'default' | 'focused' | 'unfocused',
     style?: any,
     onAnimationFinished: () => void,
-    easingInfo: EasingInfo,
     animationDuration: number
 }
 
-
+const EASING_FUNCTION = EasingFunctions.easeOutExpo;
 const HEIGHT = 37;
 const GROW_VALUE = AttentionConstants.GROW;
 
 const AttentionButton = (props: Props) => {
-    const scaleValues: any = useRef({ scaleX: 0, scaleY: 0 });
     const animationState = useRef(new ReAnimated.Value(0)).current;
     const colorState = useRef(new ReAnimated.Value(0)).current;
     const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
@@ -33,7 +31,7 @@ const AttentionButton = (props: Props) => {
             ReAnimated.timing(animationState, {
                 duration: props.animationDuration,
                 toValue: 1,
-                easing: props.easingInfo.function
+                easing: EASING_FUNCTION
 
             }).start(() => {
 
@@ -44,7 +42,7 @@ const AttentionButton = (props: Props) => {
 
         } else if (props.state === 'default') {
             ReAnimated.timing(animationState, {
-                easing: props.easingInfo.function,
+                easing: EASING_FUNCTION,
                 duration: 0.1,
                 toValue: 0
             }).start(() => {
@@ -61,7 +59,7 @@ const AttentionButton = (props: Props) => {
             ReAnimated.timing(colorState, {
                 duration: props.animationDuration,
                 toValue: 1,
-                easing: props.easingInfo.function
+                easing: EASING_FUNCTION
 
             }).start(() => {
 
@@ -71,8 +69,7 @@ const AttentionButton = (props: Props) => {
             ReAnimated.timing(colorState, {
                 duration: 0.1,
                 toValue: 0,
-                easing: props.easingInfo.function
-
+                easing: EASING_FUNCTION
             }).start();
         }
     }, [props.state])

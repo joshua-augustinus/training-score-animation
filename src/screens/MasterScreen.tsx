@@ -5,7 +5,7 @@ import { DrawerActions, NavigationDrawerProp } from 'react-navigation-drawer';
 import { Score } from '@src/components/Score';
 import { AttentionButtonContainer } from '@src/components/AttentionButtonContainer';
 import { Picker } from '@react-native-picker/picker';
-import { EasingFunctionsArray } from '@src/constants/EasingFunctions'
+import { EasingFunctions, EasingFunctionsArray } from '@src/constants/EasingFunctions'
 import { EasingInfo } from '@src/types';
 
 
@@ -19,7 +19,6 @@ type Props = {
 const MasterScreen = (props: Props) => {
     const score = useRef(0);
     const [value, setValue] = useState("0.0");
-    const [pickerState, setPickerState] = useState<number>(0);
     const [duration, setDuration] = useState("2000");
     const [soundDelay, setSoundDelay] = useState("200");
 
@@ -41,24 +40,11 @@ const MasterScreen = (props: Props) => {
             <View style={styles.header}>
 
 
-                <Text>Select an easing function below</Text>
+                <Text>...</Text>
                 <Score value={value} />
 
             </View>
-            <View style={styles.rowContainer}>
-                <Text>Easing:</Text>
-                <Picker
-                    selectedValue={pickerState}
-                    style={{ height: 50, width: 200 }}
-                    onValueChange={(itemValue, itemIndex) =>
-                        setPickerState(itemIndex)
-                    }>
-                    {EasingFunctionsArray.map((item, index) => {
-                        return <Picker.Item key={item.name} label={item.name} value={index} />
 
-                    })}
-                </Picker>
-            </View>
 
             <View style={styles.rowContainer}>
                 <Text>Duration (ms): </Text>
@@ -70,7 +56,7 @@ const MasterScreen = (props: Props) => {
             </View>
 
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <AttentionButtonContainer soundDelay={parseInt(soundDelay)} animationDuration={parseInt(duration)} onAnimationFinished={onMenuPress} easingInfo={EasingFunctionsArray[pickerState]} />
+                <AttentionButtonContainer soundDelay={parseInt(soundDelay)} animationDuration={parseInt(duration)} onAnimationFinished={onMenuPress} />
             </View>
         </SafeAreaView >
 

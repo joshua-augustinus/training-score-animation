@@ -3,6 +3,4 @@ export const AttentionConstants = {
     MIDDLE_OPACITY: 1,
     GROW: 160,
     FIRST_DURATION: 2000,
-    SECOND_DURATION: 0
-
 }

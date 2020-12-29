@@ -2,21 +2,6 @@ import { EasingInfo } from '@src/types';
 import { Easing } from 'react-native-reanimated';
 
 const EasingFunctions = {
-    linear: Easing.linear,
-    ease: Easing.ease,
-    quad: Easing.quad,
-    cubic: Easing.cubic,
-    sin: Easing.sin,
-    circle: Easing.circle,
-    exp: Easing.exp,
-    elastic: Easing.elastic,
-    back: Easing.back,
-    bounce: Easing.bounce,
-    bezier: Easing.bezier,
-    in: Easing.in,
-    out: Easing.out,
-    inOut: Easing.inOut,
-
     easeIn: Easing.bezier(0.42, 0, 1, 1),
     easeOut: Easing.bezier(0, 0, 0.58, 1),
     easeInOut: Easing.bezier(0.42, 0, 0.58, 1),
