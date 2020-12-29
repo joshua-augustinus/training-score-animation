@@ -20,6 +20,7 @@ const MasterScreen = (props: Props) => {
     const score = useRef(0);
     const [value, setValue] = useState("0.0");
     const [pickerState, setPickerState] = useState<number>(0);
+    const [duration, setDuration] = useState("2000");
     useEffect(() => {
 
     }, []);
@@ -41,21 +42,29 @@ const MasterScreen = (props: Props) => {
                 <Score value={value} />
 
             </View>
-            <Picker
-                selectedValue={pickerState}
-                style={{ height: 50, width: 200 }}
-                onValueChange={(itemValue, itemIndex) =>
-                    setPickerState(itemIndex)
-                }>
-                {EasingFunctionsArray.map((item, index) => {
-                    return <Picker.Item key={item.name} label={item.name} value={index} />
+            <View style={styles.rowContainer}>
+                <Text>Easing:</Text>
+                <Picker
+                    selectedValue={pickerState}
+                    style={{ height: 50, width: 200 }}
+                    onValueChange={(itemValue, itemIndex) =>
+                        setPickerState(itemIndex)
+                    }>
+                    {EasingFunctionsArray.map((item, index) => {
+                        return <Picker.Item key={item.name} label={item.name} value={index} />
 
-                })}
-            </Picker>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <AttentionButtonContainer onAnimationFinished={onMenuPress} easingInfo={EasingFunctionsArray[pickerState]} />
+                    })}
+                </Picker>
             </View>
-        </SafeAreaView>
+
+            <View style={styles.rowContainer}>
+                <Text>Duration (ms): </Text>
+                <TextInput keyboardType='number-pad' value={duration} onChangeText={(text) => setDuration((text))}></TextInput>
+            </View>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <AttentionButtonContainer animationDuration={parseInt(duration)} onAnimationFinished={onMenuPress} easingInfo={EasingFunctionsArray[pickerState]} />
+            </View>
+        </SafeAreaView >
 
     );
 
@@ -73,5 +82,10 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#E7E7E7',
         backgroundColor: '#F8F8F8',
+    },
+    rowContainer: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginHorizontal: 20
     }
 })

@@ -12,14 +12,13 @@ interface Props {
     state: 'default' | 'focused' | 'unfocused',
     style?: any,
     onAnimationFinished: () => void,
-    easingInfo: EasingInfo
+    easingInfo: EasingInfo,
+    animationDuration: number
 }
 
 
 const HEIGHT = 37;
 const GROW_VALUE = AttentionConstants.GROW;
-const FIRST_DURATION = AttentionConstants.FIRST_DURATION;
-const SECOND_DURATION = AttentionConstants.SECOND_DURATION;
 
 const getScaleValues = (width: number, height: number) => {
 
@@ -41,7 +40,7 @@ const AttentionButton = (props: Props) => {
         if (props.state === 'focused') {
             Animated.timing(animationState, {
                 useNativeDriver: true,
-                duration: FIRST_DURATION + SECOND_DURATION,
+                duration: props.animationDuration,
                 toValue: 1,
                 easing: props.easingInfo.function
 
@@ -70,7 +69,7 @@ const AttentionButton = (props: Props) => {
         if (props.state === 'focused') {
             Animated.timing(colorState, {
                 useNativeDriver: false,
-                duration: FIRST_DURATION + SECOND_DURATION,
+                duration: props.animationDuration,
                 toValue: 1,
                 easing: props.easingInfo.function
 
@@ -121,8 +120,8 @@ const AttentionButton = (props: Props) => {
 
 
     const buttonColor = colorState.interpolate({
-        inputRange: [0, 0.8, 0.9, 1],
-        outputRange: [DrivenColors.SECONDARY, DrivenColors.SECONDARY, DrivenColors.BUTTON_HIGHLIGHT, DrivenColors.BUTTON_HIGHLIGHT]
+        inputRange: [0, 0.8, 1, 2],
+        outputRange: [DrivenColors.SECONDARY, DrivenColors.SECONDARY, DrivenColors.BUTTON_HIGHLIGHT, DrivenColors.BUTTON_HIGHLIGHT]//We go over 2 just so that easeOutBack works
     })
 
     const textColor = colorState.interpolate({

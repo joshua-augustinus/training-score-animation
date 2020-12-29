@@ -29,7 +29,8 @@ const getInitialData = () => {
 
 interface Props {
     onAnimationFinished: () => void,
-    easingInfo: EasingInfo
+    easingInfo: EasingInfo,
+    animationDuration: number
 }
 
 
@@ -43,6 +44,13 @@ const AttentionButtonContainer = (props: Props) => {
 
         setData(getInitialData());
     }, [props.easingInfo]);
+
+    useEffect(() => {
+        //reset
+
+
+        setData(getInitialData());
+    }, [props.animationDuration]);
 
     const onAnimationFinished = (index: number) => {
         /*setTimeout(() => {
@@ -67,7 +75,7 @@ const AttentionButtonContainer = (props: Props) => {
 
     return <View>
         {data.map((item, index) => {
-            return <AttentionButton easingInfo={props.easingInfo} onAnimationFinished={() => onAnimationFinished(index)} state={item.state} key={item.key} text={item.displayText} onPress={() => onButtonPressed(index)} />
+            return <AttentionButton animationDuration={props.animationDuration} easingInfo={props.easingInfo} onAnimationFinished={() => onAnimationFinished(index)} state={item.state} key={item.key} text={item.displayText} onPress={() => onButtonPressed(index)} />
 
         })}
 
