@@ -6,7 +6,6 @@ const EasingFunctions = {
     ease: Easing.ease,
     quad: Easing.quad,
     cubic: Easing.cubic,
-    poly: Easing.poly,
     sin: Easing.sin,
     circle: Easing.circle,
     exp: Easing.exp,
@@ -55,11 +54,8 @@ const EasingFunctions = {
     easeInOutBack: Easing.bezier(0.68, -0.55, 0.265, 1.55),
 
     easeInElastic: Easing.out(Easing.elastic(2)),
-    easeInElasticCustom: (bounciness = 2) => Easing.out(Easing.elastic(bounciness)),
     easeOutElastic: Easing.in(Easing.elastic(2)),
-    easeOutElasticCustom: (bounciness = 2) => Easing.in(Easing.elastic(bounciness)),
     easeInOutElastic: Easing.inOut(Easing.out(Easing.elastic(2))),
-    easeInOutElasticCustom: (bounciness = 2) => Easing.inOut(Easing.out(Easing.elastic(bounciness))),
 
     easeInBounce: Easing.out(Easing.bounce),
     easeOutBounce: Easing.in(Easing.bounce),

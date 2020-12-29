@@ -70,14 +70,12 @@ const AttentionButton = (props: Props) => {
         if (props.state === 'focused') {
             Animated.timing(colorState, {
                 useNativeDriver: false,
-                duration: FIRST_DURATION,
-                toValue: 0.8
+                duration: FIRST_DURATION + SECOND_DURATION,
+                toValue: 1,
+                easing: props.easingInfo.function
+
             }).start(() => {
-                Animated.timing(colorState, {
-                    useNativeDriver: false,
-                    duration: SECOND_DURATION,
-                    toValue: 1
-                }).start();
+
             });
 
         } else if (props.state === 'default') {
@@ -123,8 +121,8 @@ const AttentionButton = (props: Props) => {
 
 
     const buttonColor = colorState.interpolate({
-        inputRange: [0, 0.8, 1],
-        outputRange: [DrivenColors.SECONDARY, DrivenColors.SECONDARY, DrivenColors.BUTTON_HIGHLIGHT]
+        inputRange: [0, 0.8, 0.9, 1],
+        outputRange: [DrivenColors.SECONDARY, DrivenColors.SECONDARY, DrivenColors.BUTTON_HIGHLIGHT, DrivenColors.BUTTON_HIGHLIGHT]
     })
 
     const textColor = colorState.interpolate({
