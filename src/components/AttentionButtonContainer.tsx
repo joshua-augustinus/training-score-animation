@@ -40,19 +40,13 @@ const AttentionButtonContainer = (props: Props) => {
     const [data, setData] = useState(getInitialData());
     const pressedIndex = useRef(-1);
 
-    useEffect(() => {
-        //reset
-
-
-        setData(getInitialData());
-    }, [props.easingInfo]);
 
     useEffect(() => {
         //reset
 
 
         setData(getInitialData());
-    }, [props.animationDuration]);
+    }, [props.animationDuration, props.soundDelay, props.easingInfo]);
 
     const onAnimationFinished = (index: number) => {
         /*setTimeout(() => {
