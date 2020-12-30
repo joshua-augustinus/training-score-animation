@@ -120,25 +120,28 @@ const AttentionButton = (props: Props) => {
 
     return (
         <View style={{ opacity: props.state === 'unfocused' ? 0 : 1 }}>
-
             <View style={StyleSheet.absoluteFill}>
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <View style={styles.expandingViewContainer}>
                     <ReAnimated.View style={[styles.container, styles.expandingView, { width: width, height: height, opacity: opacity }]} />
                 </View>
             </View>
+
             <View style={StyleSheet.absoluteFill}>
                 {/*@ts-ignore*/}
-                <ReAnimated.View style={[styles.container, { backgroundColor: buttonColor, opacity: 1 }]}>
-                    {/*@ts-ignore*/}
-                    <ReAnimated.Text style={[styles.text, { color: textColor }]}>
-                        {props.text}
-                    </ReAnimated.Text>
+                <ReAnimated.View style={[styles.container, { backgroundColor: buttonColor, opacity: 1, alignSelf: 'center' }]}>
+                    <View style={styles.solidContainer}>
+                        {/*@ts-ignore*/}
+                        <ReAnimated.Text style={[styles.text, { color: textColor }]}>
+                            {props.text}
+                        </ReAnimated.Text>
+                    </View>
+
                 </ReAnimated.View>
             </View>
 
             <Pressable
                 onPress={props.onPress}>
-                <ReAnimated.View style={[styles.container, props.style, { opacity: linearOpacity }]}>
+                <ReAnimated.View style={[styles.container, props.style, { opacity: linearOpacity, alignItems: 'center' }]}>
                     <LinearGradient colors={['#FFCC00', DrivenColors.SECONDARY]} style={styles.gradientContainer} onLayout={onLayout}>
                         <Animated.Text style={[styles.text]}>
                             {props.text}
@@ -149,6 +152,7 @@ const AttentionButton = (props: Props) => {
 
 
             </Pressable >
+
         </View>
 
 
@@ -167,11 +171,17 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         borderColor: DrivenColors.SECONDARY,
         height: HEIGHT,
+
     },
     gradientContainer: {
         paddingLeft: 16,
         paddingRight: 16,
         height: HEIGHT,
+        justifyContent: "center",
+        borderRadius: 24,
+    }, solidContainer: {
+        paddingLeft: 16,
+        paddingRight: 16,
         justifyContent: "center",
         borderRadius: 24,
     },
@@ -184,7 +194,12 @@ const styles = StyleSheet.create({
     }, expandingView: {
         backgroundColor: DrivenColors.SECONDARY,
         borderWidth: 0,
-        borderRadius: 1000
+        borderRadius: 1000,
+    },
+    expandingViewContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 
 });

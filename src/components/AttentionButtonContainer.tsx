@@ -27,7 +27,7 @@ const getInitialData = () => {
             key: "2", displayText: "Test 2", state: 'default'
         },
         {
-            key: "3", displayText: "Test 3", state: 'default'
+            key: "3", displayText: "Test 3 Long Text", state: 'default'
         }
     ]
 
@@ -75,7 +75,7 @@ const AttentionButtonContainer = (props: Props) => {
 
     }
 
-    return <View>
+    return <View style={{ alignItems: 'flex-end', width: '100%', paddingHorizontal: 5 }}>
         {data.map((item, index) => {
             return <AttentionButton animationDuration={props.animationDuration} onAnimationFinished={() => onAnimationFinished(index)} state={item.state} key={item.key} text={item.displayText} onPress={() => onButtonPressed(index)} />
 
