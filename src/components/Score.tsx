@@ -1,21 +1,22 @@
+import { EasingFunctions } from "@src/constants/EasingFunctions";
 import React, { useEffect, useRef, useState } from "react";
-import { Animated, Easing, StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, useWindowDimensions, View } from "react-native";
+import Animated, { Easing } from "react-native-reanimated";
 import { AttentionConstants } from "./AttentionConstants";
 
 interface Props {
-    value: string
+    value: string,
+    animationDuration: number
 }
 
 const SCORE_HEIGHT = 35;
 const SCORE_WIDTH = 60;
 const GROW_VALUE = AttentionConstants.GROW;
-const PULSE_X = (SCORE_WIDTH + GROW_VALUE) / SCORE_WIDTH
-const PULSE_Y = (SCORE_HEIGHT + GROW_VALUE) / SCORE_HEIGHT
 const SECONDARY = 'rgb(248, 145, 55)';
 
 const BORDER_COLOR = '#008ead';
 
-
+const EASING_FUNCTION = EasingFunctions.easeInExpo;
 
 
 const Score = (props: Props) => {
@@ -37,45 +38,39 @@ const Score = (props: Props) => {
 
         //on value changed
         const reset = Animated.timing(pulseAnimationState, {
-            useNativeDriver: true,
+            easing: EASING_FUNCTION,
             toValue: 0,
-            duration: 0
+            duration: 0.1
         })
 
         const pulse1 = Animated.timing(pulseAnimationState, {
-            useNativeDriver: true,
-            toValue: 0.2,
-            duration: AttentionConstants.SECOND_DURATION,
-        });
-
-        const pulse2 = Animated.timing(pulseAnimationState, {
-            useNativeDriver: true,
+            easing: EASING_FUNCTION,
             toValue: 1,
-            duration: AttentionConstants.FIRST_DURATION,
+            duration: props.animationDuration,
         });
 
-        Animated.sequence([reset, pulse1, pulse2]).start(() => {
-            //on value changed
-            Animated.timing(animationState, {
-                useNativeDriver: true,
-                toValue: 1,
-                duration: 500,
-            }).start(() => {
-                //reset
+        reset.start(() => {
+            pulse1.start(() => {
+                //Pulse animation complete; now do number animation
+
+                //on value changed
                 Animated.timing(animationState, {
-                    useNativeDriver: true,
-                    toValue: 0,
-                    duration: 0
-                }).start();
+                    easing: EasingFunctions.easeInOut,
+                    toValue: 1,
+                    duration: 500,
+                }).start(() => {
+                    //reset
+                    Animated.timing(animationState, {
+                        easing: EasingFunctions.easeInOut,
+                        toValue: 0,
+                        duration: 0.1
+                    }).start();
 
-                setOldValue(props.value);
+                    setOldValue(props.value);
 
-            });
-
-        }
-
-        );
-
+                });
+            })
+        });
 
 
 
@@ -86,15 +81,14 @@ const Score = (props: Props) => {
      */
     useEffect(() => {
         Animated.timing(borderAnimationState, {
-            useNativeDriver: false,
+            easing: EASING_FUNCTION,
             toValue: 1,
-            duration: 1000
+            duration: props.animationDuration
         }).start(() => {
             Animated.timing(borderAnimationState, {
-                useNativeDriver: false,
+                easing: EASING_FUNCTION,
                 toValue: 0,
-                duration: 1000,
-                delay: 1000
+                duration: 1000
             }).start();
         });
     }, [props.value]);
@@ -102,16 +96,16 @@ const Score = (props: Props) => {
     /**
      * Animation for pulse
      */
-    const scaleX = pulseAnimationState.interpolate({
+    const pulseWidth = Animated.interpolate(pulseAnimationState, {
         inputRange: [0, 1],
-        outputRange: [PULSE_X, 1]
+        outputRange: [SCORE_WIDTH + GROW_VALUE, SCORE_WIDTH]
     })
-    const scaleY = pulseAnimationState.interpolate({
+    const pulseHeight = Animated.interpolate(pulseAnimationState, {
         inputRange: [0, 1],
-        outputRange: [PULSE_Y, 1]
+        outputRange: [SCORE_HEIGHT + GROW_VALUE, SCORE_HEIGHT]
     })
-    const pulseTransform = [{ scaleX: scaleX }, { scaleY: scaleY }];
-    const opacity = pulseAnimationState.interpolate({
+
+    const pulseOpacity = Animated.interpolate(pulseAnimationState, {
         inputRange: [0, 0.2, 1],
         outputRange: [AttentionConstants.LOWER_OPACITTY, AttentionConstants.MIDDLE_OPACITY, 1]
     })
@@ -119,9 +113,9 @@ const Score = (props: Props) => {
     /**
      * Animate border color
      */
-    const borderColor = borderAnimationState.interpolate({
+    const borderColor = Animated.interpolateColors(borderAnimationState, {
         inputRange: [0, 1],
-        outputRange: [BORDER_COLOR, SECONDARY]
+        outputColorRange: [BORDER_COLOR, SECONDARY]
     })
 
 
@@ -129,7 +123,7 @@ const Score = (props: Props) => {
     /**
      * Animation for text coming in
      */
-    const translateYIn = animationState.interpolate({
+    const translateYIn = Animated.interpolate(animationState, {
         inputRange: [0, 1],
         outputRange: [-SCORE_HEIGHT, 0]
     })
@@ -138,7 +132,7 @@ const Score = (props: Props) => {
     /**
      * Animation for text coming out
      */
-    const translateYOut = animationState.interpolate({
+    const translateYOut = Animated.interpolate(animationState, {
         inputRange: [0, 1],
         outputRange: [0, SCORE_HEIGHT]
     })
@@ -148,11 +142,18 @@ const Score = (props: Props) => {
     return (
 
         <View>
-            <Animated.View style={{ ...styles.pulse, transform: pulseTransform, opacity: opacity }} >
+            <View style={styles.sizeContainer} >
+                <View style={styles.pulseContainer}>
+                    <Animated.View style={{ ...styles.pulse, width: pulseWidth, height: pulseHeight, opacity: pulseOpacity }} >
 
-            </Animated.View>
+                    </Animated.View>
+                </View>
+
+            </View>
             <View style={styles.container} >
+
                 <View style={StyleSheet.absoluteFill}>
+                    {/*@ts-ignore*/}
                     <Animated.View style={{ ...styles.border, borderColor: borderColor }} />
                 </View>
                 <View style={styles.innerContainer}>
@@ -189,12 +190,20 @@ const styles = StyleSheet.create({
         height: "100%",
         overflow: 'hidden'
     },
+    sizeContainer: {
+        height: SCORE_HEIGHT,
+        width: SCORE_WIDTH,
+    },
+    pulseContainer: {
+        ...StyleSheet.absoluteFillObject,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     pulse: {
         backgroundColor: SECONDARY,
         height: SCORE_HEIGHT,
         width: SCORE_WIDTH,
-        borderRadius: 20,
-        opacity: 0.1
+        borderRadius: 100,
     },
 
     border: {

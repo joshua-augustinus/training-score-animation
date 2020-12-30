@@ -2,8 +2,14 @@ import { PlaySound } from "@src/services/SoundService"
 import { ButtonState, EasingInfo } from "@src/types"
 import React, { useEffect, useRef, useState } from "react"
 import { View } from "react-native"
-import Animated from "react-native-reanimated"
 import { AttentionButton } from "./AttentionButton"
+
+interface Props {
+    onAnimationFinished: () => void,
+    animationDuration: number,
+    soundDelay: number,
+    newData: any
+}
 
 interface Data {
     key: string,
@@ -21,19 +27,14 @@ const getInitialData = () => {
             key: "2", displayText: "Test 2", state: 'default'
         },
         {
-            key: "3", displayText: "Test 3", state: 'default'
+            key: "3", displayText: "Test 3 Long Text", state: 'default'
         }
     ]
 
     return dataSingleton
 }
 
-interface Props {
-    onAnimationFinished: () => void,
-    easingInfo: EasingInfo,
-    animationDuration: number,
-    soundDelay: number
-}
+
 
 
 const AttentionButtonContainer = (props: Props) => {
@@ -46,13 +47,13 @@ const AttentionButtonContainer = (props: Props) => {
 
 
         setData(getInitialData());
-    }, [props.animationDuration, props.soundDelay, props.easingInfo]);
+    }, [props.animationDuration, props.soundDelay, props.newData]);
 
     const onAnimationFinished = (index: number) => {
-        /*setTimeout(() => {
+        setTimeout(() => {
             props.onAnimationFinished();
 
-        }, 1000);*/
+        }, 1000);
     }
 
     const onButtonPressed = (index: number) => {
@@ -74,9 +75,9 @@ const AttentionButtonContainer = (props: Props) => {
 
     }
 
-    return <View>
+    return <View style={{ alignItems: 'flex-end', width: '100%', paddingHorizontal: 5 }}>
         {data.map((item, index) => {
-            return <AttentionButton animationDuration={props.animationDuration} easingInfo={props.easingInfo} onAnimationFinished={() => onAnimationFinished(index)} state={item.state} key={item.key} text={item.displayText} onPress={() => onButtonPressed(index)} />
+            return <AttentionButton animationDuration={props.animationDuration} onAnimationFinished={() => onAnimationFinished(index)} state={item.state} key={item.key} text={item.displayText} onPress={() => onButtonPressed(index)} />
 
         })}
 
